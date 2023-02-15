@@ -1,0 +1,238 @@
+.first{
+  position: relative;
+  overflow: hidden;
+
+  &__left-btn{
+    position: absolute;
+    top:  50%;
+    left: -11px;
+    z-index: 2;
+    transform: scale(.7);
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 15px;
+    border: none;
+
+
+    &:hover{
+      transform: scale(1.05);
+    }
+    &:active{
+      transform: scale(.9);
+    }
+  }
+  &__right-btn{
+    position: absolute;
+    top:  50%;
+    right: -10px;
+    z-index: 2;
+    transform: scale(.7);
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 15px;
+    border: none;
+
+
+    &:hover{
+      transform: scale(1.05);
+      right: -5px;
+    }
+    &:active{
+      transform: scale(.9);
+    }
+  }
+
+
+  &__slider{
+      display: flex;
+      min-width: 100%;
+      max-width: 100%;
+      transition: translate;
+      transition-property:transform;
+      transition-duration: .8s;
+      transition-timing-function: ease;
+    }
+
+  &__items{
+    display: flex;
+    column-gap: 10%;
+    overflow: hidden;
+  }
+
+  &__bg{
+    width: 55%;
+    background: url("../img/live__bg1.png") center/cover no-repeat;
+
+    &-second{
+      background: url("../img/live__bg2.png") center/cover no-repeat;
+    }
+    &-third{
+      background: url("../img/live__bg4.png") center/cover no-repeat;
+    }
+  }
+
+  &__content{
+    background: #B17955;
+    width: 45%;
+    padding: 146px 0 56px 52px;
+
+    &-text{
+      text-align: center;
+    }
+
+    &-title{
+      font-size: 32px;
+      line-height: 39px;
+      color: #FFFFFF;
+    }
+
+    &-sale{
+      font-weight: 800;
+      font-size: 130px;
+      line-height: 158px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      margin: 13px 0 18px;
+    }
+
+    &-collection{
+      font-size: 24px;
+      line-height: 29px;
+      color: #FFFFFF;
+      margin-bottom: 105px;
+    }
+
+    &-btn{
+      background: rgba(255, 255, 255, 0.2);
+      padding:13px 40px ;
+    }
+  }
+}
+
+@media (max-width: 890px) {
+  .first__content-title {
+    font-size: 25px;
+  }
+  .first__content-sale {
+    font-weight: 800;
+    font-size: 100px;
+    margin: 0;
+  }
+  .first__content {
+    padding: 120px 0 56px 52px;
+  }
+  .first__content-collection {
+    margin-bottom: 70px;
+  }
+}
+
+@media (max-width: 840px) {
+  .first__slider {
+    flex-direction: column;
+  }
+  .first__bg {
+    width: 100%;
+    height: 400px;
+  }
+  .first__content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media (max-width: 800px) {
+  .first__content {
+    padding: 19px 0 25px 0;
+  }
+  .first__content-collection {
+    margin-bottom: 25px;
+  }
+
+}
+
+@media (max-width: 700px) {
+  .first__content{
+    padding: 10px;
+  }
+  .first__bg {
+    height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .first__content-sale {
+    font-weight: 800;
+    font-size: 80px;
+    margin: -30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .first__content{
+    display: flex;
+    padding: 16px 20px 20px 20px;
+    flex-direction: row;
+    column-gap: 20px;
+  }
+  .first__content-title{
+    font-size: 16px;
+    line-height: 17px;
+  }
+  .first__content-sale{
+    font-size: 54px;
+    line-height: 66px;
+    margin: 7px 0 ;
+  }
+  .first__content-collection{
+    font-size: 16px;
+    line-height: 12px;
+    margin: 0;
+  }
+  .first__bg {
+    height: 250px;
+  }
+}
+
+@media (max-width: 400px) {
+  .first__right-btn {
+    transform: scale(0.6);
+    &:hover{
+      transform: scale(0.65);
+    }
+  }
+  .first__left-btn {
+    transform: scale(0.6);
+    &:hover{
+      transform: scale(0.65);
+    }
+  }
+}
+
+@media (max-width: 350px){
+  .first__bg {
+    height: 200px;
+  }
+  .first__content-title {
+    font-size: 14px;
+  }
+  .first__content-sale {
+    font-size: 49px;
+    margin: 1px 0;
+  }
+
+  .first__content-collection {
+    font-size: 18px;
+    margin: 0;
+  }
+  .first__content-btn {
+    padding: 9px 25px;
+  }
+  .first__right-btn {
+    top: 45%;
+  }
+  .first__left-btn {
+    top: 45%;
+  }
+}

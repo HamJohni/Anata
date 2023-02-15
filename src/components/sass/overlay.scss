@@ -1,0 +1,124 @@
+.overlayProject{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: #00000090;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  opacity: 0;
+  pointer-events: none;
+  transition: 1s;
+}
+
+.overlayProject.active{
+  opacity: 1;
+  pointer-events: all;
+}
+
+.project{
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  background: white;
+  transform: scale(.5);
+  transition: .5s;
+
+  &__title{
+    margin: 32px 0 40px;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+  }
+
+  &__form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+
+    &-label{
+      width: 100%;
+      height: 141px;
+      border: 2px dashed #878B9080;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      text-align: center;
+      row-gap: 20px;
+    }
+
+    &-btn{
+     padding: 13px 30px;
+    }
+
+  }
+
+  &__label{
+    display: flex;
+    flex-direction: column;
+
+    &-span{
+      font-size: 14px;
+      line-height: 150%;
+      color: #878B90;
+    }
+
+    &-input{
+      padding: 8px 10px 5px 0;
+      color: black;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 150%;
+      background: none;
+      border: none;
+      border-bottom: 2px solid #878B9080;
+      outline: none;
+    }
+  }
+
+}
+.project.active{
+  transform: scale(1);
+}
+
+.call{
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  background: white;
+  transform: scale(.5);
+  transition: .5s;
+}
+
+.overlayCall{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: #00000090;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  opacity: 0;
+  pointer-events: none;
+  transition: 1s;
+}
+
+.overlayCall.active{
+  opacity: 1;
+  pointer-events: all;
+}
+
+.call.active{
+  transform: scale(1);
+}

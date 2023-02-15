@@ -1,0 +1,294 @@
+.header{
+  padding: 24px 0 32px;
+
+  &__title{
+    cursor: pointer;
+  }
+
+  &__nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__right{
+    display: flex;
+    align-items: center;
+    column-gap: 60px;
+
+    &-li{
+      font-size: 14px;
+      line-height: 150%;
+      text-align: right;
+      color: #000000;
+      display: flex;
+      flex-direction: column;
+      transition: .3s;
+      cursor: pointer;
+
+      &:hover{
+        transform: scale(1.1);
+        color: #B17955;
+      }
+
+      &:active{
+        transform: scale(0.9);
+      }
+    }
+
+    &-bold{
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 150%;
+      color: #000000;
+    }
+
+    &-grey{
+      font-size: 14px;
+      line-height: 150%;
+      color: #878B90;
+    }
+  }
+
+  &__bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-left{
+      display: flex;
+      align-items: center;
+      column-gap: 43px;
+    }
+
+    &-burger{
+      display: flex;
+      flex-direction: column;
+      row-gap: 6px;
+      border: none;
+      transition: .3s;
+      cursor: pointer;
+
+      &:hover{
+        transform: scale(1.1);
+        color: #B17955;
+      }
+
+      &:active{
+        transform: scale(0.9);
+      }
+    }
+
+    &-line{
+      height: 2.5px;
+      background: black;
+      border-radius: 10px;
+    }
+
+    &-ul{
+      display: flex;
+      column-gap: 40px;
+      align-items: center;
+    }
+
+    &-li{
+      font-size: 17px;
+      line-height: 24px;
+      color: #000000;
+      transition: .3s;
+      cursor: pointer;
+
+      &:hover{
+        transform: scale(1.1);
+        color: #B17955;
+      }
+
+      &:active{
+        transform: scale(0.9);
+      }
+    }
+
+    &-right{
+      display: flex;
+      column-gap: 15px;
+      align-items: center;
+    }
+
+    &-btn1{
+      display: flex;
+      column-gap: 15px;
+      align-items: center;
+      padding: 11px 20px;
+      border: 1px solid rgba(135, 139, 144, 0.5);
+      border-radius: 8px;
+      position: relative;
+      transition: .5s;
+      cursor: pointer;
+
+      &:hover{
+        transform: scale(0.95);
+      }
+
+      &:active{
+        transform: scale(0.8);
+      }
+    }
+
+    &-btn::before{
+      content:"5 вариантов за 5 минут";
+      position: absolute;
+      left: 50%;
+      top: 90%;
+      transform: translate(-50%, -20%);
+      font-size: 11px;
+      line-height: 150%;
+      color: white;
+      background: #B17955;
+      border-radius: 5px;
+      width: 75%;
+      text-align: center;
+    }
+  }
+}
+.telegram{
+  display: flex;
+  align-items: center;
+  column-gap:16px;
+}
+
+@media (max-width: 1200px) {
+  .header__bottom-left{
+    justify-content: start;
+  }
+
+  .header__bottom-right{
+    justify-content: flex-end;
+  }
+
+  .header__bottom{
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
+
+@media (max-width: 890px) {
+  .header__right-li {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 840px) {
+  .header__right-li {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 800px) {
+  .header__nav{
+    flex-direction: column;
+  }
+  .header__right-li {
+    font-size: 15px;
+  }
+  .first__content {
+    padding: 50px 0 56px 52px;
+  }
+}
+
+@media (max-width: 700px) {
+ .header__right{
+   display: none;
+ }
+  .header{
+    padding-bottom: 20px;
+  }
+  .header__bottom-left{
+    column-gap: 25px;
+  }
+}
+@media (max-width: 650px) {
+
+}
+
+@media (max-width: 550px) {
+  .header__bottom-li{
+    font-size: 15px;
+  }
+  .header__bottom-ul{
+    column-gap: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container-header{
+    display: none;
+  }
+  .container-adaptation{
+    display: block;
+  }
+  .header__nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .header__right-li{
+    text-align: center;
+    font-size: 16px;
+  }
+  .header__bottom-burger{
+    align-items: end;
+  }
+  .header__bottom-left{
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .header__bottom-btn1 {
+    padding: 7px 20px;
+    font-size: 11px;
+  }
+
+  .header__bottom-btn::before {
+    content: "5 вариантов за 5 минут";
+    font-size: 8px;
+  }
+  .header__bottom-ul {
+    column-gap: 24px;
+  }
+  .header__bottom-li {
+    font-size: 12px;
+  }
+  .telegram {
+    column-gap: 10px;
+  }
+}
+
+@media (max-width: 350px){
+  .header__bottom-ul {
+    column-gap: 18px;
+  }
+  .header__bottom-btn1 {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+  }
+  .header__bottom-right {
+    width: 100%;
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+
+}
+@media (max-width: 321px){
+  .header__bottom-li {
+    font-size: 10px;
+  }
+  .telegram {
+    column-gap: 5px;
+  }
+}
